@@ -5,5 +5,5 @@ package com.wk.bodgepodge.interfaces;
  * @since JDK8
  */
 public interface AccountProvider {
-    void decrease(int userId, int amount);
+    void decrease(int userId, int money);
 }

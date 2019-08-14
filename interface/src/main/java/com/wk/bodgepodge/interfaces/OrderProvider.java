@@ -5,5 +5,5 @@ package com.wk.bodgepodge.interfaces;
  * @since JDK8
  */
 public interface OrderProvider {
-    void createOrder(int userId, String commodityCode, int num);
+    void createOrder(int userId, String commodityCode, int count, int money);
 }

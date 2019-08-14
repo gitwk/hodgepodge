@@ -25,10 +25,10 @@ public class AccountProviderImpl implements AccountProvider {
     private AccountMapper accountMapper;
 
     @Override
-    public void decrease(int userId, int amount) {
+    public void decrease(int userId, int money) {
         String xid = RootContext.getXID();
         logger.info("开始执行扣除资金账户操作，全局事务ID为{}", xid);
-        AccountPo accountPo = new AccountPo().setUserId(userId).setMoney(amount);
+        AccountPo accountPo = new AccountPo().setUserId(userId).setMoney(money);
         accountMapper.update(accountPo);
         logger.info("执行扣除资金账户操作成功！");
     }

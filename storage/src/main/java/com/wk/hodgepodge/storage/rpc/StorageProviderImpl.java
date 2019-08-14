@@ -24,10 +24,10 @@ public class StorageProviderImpl implements StorageProvider {
     private StorageMapper storageMapper;
 
     @Override
-    public void decrease(int num) {
+    public void decrease(int count) {
         String xid = RootContext.getXID();
         logger.info("开始执行扣减库存请求，全局事务ID为{}", xid);
-        storageMapper.decrease(num);
+        storageMapper.decrease(count);
         logger.info("执行扣减库存操作成功！");
     }
 

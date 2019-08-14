@@ -16,10 +16,16 @@
 
     <properties>
         <java.version>1.8</java.version>
+
+        <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+
         <dubbo.version>2.7.3</dubbo.version>
         <dubbo.registry.nacos.version>2.7.3</dubbo.registry.nacos.version>
         <nacos-client.version>1.1.3</nacos-client.version>
         <seata.version>0.7.1</seata.version>
+
+        <mysql.connector.version>8.0.16</mysql.connector.version>
+        <mybatis.starter.version>2.1.0</mybatis.starter.version>
 
         <nacos-discovery-spring-boot.version>0.2.2</nacos-discovery-spring-boot.version>
         <nacos-config-spring-boot.version>0.2.2</nacos-config-spring-boot.version>
@@ -61,33 +67,33 @@
                 <artifactId>jackson-databind</artifactId>
             </dependency>
 
+            <!--web依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+
             <!--mybatis依赖-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.0</version>
+                <version>${mybatis.starter.version}</version>
             </dependency>
 
             <!--mysql依赖-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.16</version>
+                <version>${mysql.connector.version}</version>
                 <scope>runtime</scope>
-            </dependency>
-
-            <!--web依赖-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${project.version}</version>
             </dependency>
 
             <!--test依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <version>${project.version}</version>
+                <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
 

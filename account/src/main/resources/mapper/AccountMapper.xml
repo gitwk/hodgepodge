@@ -5,7 +5,7 @@
         INSERT INTO `account_tbl` VALUES (null, #{userId}, #{money})
     </insert>
     <update id="update">
-        update `account_tbl` set money = money - #{amount} where user_id = #{userId}
+        update `account_tbl` set money = money - #{money} where user_id = #{userId}
     </update>
     <delete id="clear">
         delete from `account_tbl`
