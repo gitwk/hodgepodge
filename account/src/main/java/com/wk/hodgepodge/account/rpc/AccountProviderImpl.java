@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.Random;
 
 /**
  * @author wangkai
@@ -21,6 +22,8 @@ public class AccountProviderImpl implements AccountProvider {
 
     private static Logger logger = LoggerFactory.getLogger(AccountProviderImpl.class);
 
+    private Random random = new Random();
+
     @Resource
     private AccountMapper accountMapper;
 
@@ -30,6 +33,10 @@ public class AccountProviderImpl implements AccountProvider {
         logger.info("开始执行扣除资金账户操作，全局事务ID为{}", xid);
         AccountPo accountPo = new AccountPo().setUserId(userId).setMoney(money);
         accountMapper.update(accountPo);
+        boolean success = random.nextBoolean();
+        if (!success) {
+            throw new RuntimeException("执行扣除资金账户失败");
+        }
         logger.info("执行扣除资金账户操作成功！");
     }
 

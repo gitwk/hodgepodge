@@ -58,7 +58,7 @@ public class DatasourceConfig {
 
     @Bean
     public GlobalTransactionScanner globalTransactionScanner() {
-        return new GlobalTransactionScanner(applicationId, "hodgepodge-tx-group");
+        return new GlobalTransactionScanner(applicationId, "hodgepodge_tx_group3");
     }
 
 }

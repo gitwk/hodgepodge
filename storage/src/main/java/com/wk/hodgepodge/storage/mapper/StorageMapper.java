@@ -11,5 +11,5 @@ public interface StorageMapper {
 
     void insert(StoragePo storagePo);
 
-    void decrease(int count);
+    void decrease(String commodityCode, int count);
 }

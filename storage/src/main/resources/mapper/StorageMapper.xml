@@ -5,7 +5,7 @@
         insert into `storage_tbl` values (null,#{commodityCode},#{count})
     </insert>
     <update id="decrease">
-        update `storage_tbl` set count = count - #{0}
+        update `storage_tbl` set count = count - #{count} where commodity_code = #{commodityCode}
     </update>
     <delete id="clear">
         delete from `storage_tbl`

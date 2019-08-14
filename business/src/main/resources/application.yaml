@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+dubbo:
+  application:
+    name: service.business
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://172.16.2.200:8848
+
+nacos:
+  config:
+    server-addr: 172.16.2.200:8848

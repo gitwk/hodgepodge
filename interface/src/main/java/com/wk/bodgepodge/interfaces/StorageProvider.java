@@ -5,5 +5,5 @@ package com.wk.bodgepodge.interfaces;
  * @since JDK8
  */
 public interface StorageProvider {
-    void decrease(int count);
+    void decrease(String commodity, int count);
 }
