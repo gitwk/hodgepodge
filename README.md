@@ -1,5 +1,5 @@
 # hodgepodge
-系统基于SpringBoot2.1.6搭建
+系统基于SpringBoot 2.1.6.RELEASE 搭建
 
 1、整合dubbo（2.7.3），采用nacos（1.1.3）作为dubbo服务的注册中心
 
