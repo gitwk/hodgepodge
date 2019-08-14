@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wk.hodgepodge.account.mapper.AccountMapper">
+    <insert id="insert">
+        INSERT INTO `account_tbl` VALUES (null, #{userId}, #{money})
+    </insert>
+    <update id="update">
+        update `account_tbl` set money = money - #{amount} where user_id = #{userId}
+    </update>
+    <delete id="clear">
+        delete from `account_tbl`
+    </delete>
+</mapper>

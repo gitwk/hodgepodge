@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: hodgepodge-account
+
+server:
+  port:  8082
+
+nacos:
+  config:
+    server-addr: 172.16.2.200:8848
+
+dubbo:
+  application:
+    name: service.account
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://172.16.2.200:8848
